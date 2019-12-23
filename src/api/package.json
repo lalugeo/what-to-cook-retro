@@ -1,0 +1,18 @@
+{
+	"name": "what-to-cook-api",
+	"version": "0.0.1",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/lalugeo/what-to-cook"
+	},
+	"author": "Lalu George",
+	"devDependencies": {
+		"eslint": "^6.8.0",
+		"jest": "^24.9.0",
+		"ts-jest": "^24.2.0",
+		"typescript": "^3.7.4"
+	},
+	"dependencies": {
+		"express": "^4.17.1"
+	}
+}

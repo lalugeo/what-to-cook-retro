@@ -105,4 +105,4 @@ dist
 
 # Custom wtc ignores
 # DB
-db/wtc.db
+src/db/wtc.db
