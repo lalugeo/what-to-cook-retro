@@ -2,18 +2,25 @@ import express from "express";
 import bodyParser from "body-parser";
 import * as loggerLib from "./api/logger";
 import * as api from "./api";
+import * as db from "./db";
 
-// Create Express server
-const app = express();
 const webappFolder = 'dist/client';
 
 const logger = loggerLib.createLogger('api.app');
-
-// Express configuration
-app.set("listen", () => {
-  logger.info(`app started at ${app.get("port")}`);
+const app = express();
+app.set("listen", async () => {
+  try {
+    logger.info(db.DB_CONNECTION_STRING);
+    await db.getConnection();
+    logger.info(`db connected`);
+    logger.info(`app started at ${app.get("port")}`);
+  } catch (err) {
+    logger.error(err.message);
+  }
 });
-app.set("port", process.env.PORT || 3000);
+
+app.set("port", process.env.PORT);
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 

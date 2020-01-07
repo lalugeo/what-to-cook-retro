@@ -1,6 +1,8 @@
 import * as loggerLib from "./logger";
+import RecipeController from "./controllers/recipe.controller";
+
 const logger = loggerLib.createLogger('api');
-export function a(): string {
-  logger.info('someone called me');
-  return 'Hello';
+export async function a() {
+  await RecipeController.createRecipe('tandoori');
+  logger.info('recipe created');
 }
