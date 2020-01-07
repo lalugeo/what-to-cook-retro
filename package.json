@@ -8,7 +8,9 @@
 	"author": "Lalu George",
 	"scripts": {
 		"start": "npm run build && npm run serve",
-		"build": "npm run build-ts && npm run lint",
+		"build": "npm run build-be && npm run build-fe",
+		"build-fe": "cd src/client && ng build",
+		"build-be": "npm run build-ts && npm run lint",
 		"serve": "node dist/server.js",
 		"test": "jest --forceExit --coverage --verbose",
 		"build-ts": "tsc",

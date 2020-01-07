@@ -15,5 +15,11 @@
       "paths": {
         "src/*": ["src/*"],
       }
-    }
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "src/client/**/*"
+    ]
 }  

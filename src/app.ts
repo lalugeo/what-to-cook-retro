@@ -5,7 +5,7 @@ import * as api from "./api";
 
 // Create Express server
 const app = express();
-const webappFolder = 'dist/web';
+const webappFolder = 'dist/client';
 
 const logger = loggerLib.createLogger('api.app');
 
