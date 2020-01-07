@@ -10,9 +10,7 @@ const logger = loggerLib.createLogger('api.app');
 const app = express();
 app.set("listen", async () => {
   try {
-    logger.info(db.DB_CONNECTION_STRING);
     await db.getConnection();
-    logger.info(`db connected`);
     logger.info(`app started at ${app.get("port")}`);
   } catch (err) {
     logger.error(err.message);
