@@ -2,7 +2,6 @@ import mongoose from 'mongoose';
 
 const MONGODB_OPTIONS: mongoose.ConnectionOptions = {
   useNewUrlParser: true,
-  // useUnifiedTopology: true,
   connectTimeoutMS: Number(process.env.DB_CONNECTION_TIMEOUT)
 };
 
