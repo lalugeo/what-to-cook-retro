@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+      "experimentalDecorators": true,
       "outDir": "./dist",
       "module": "commonjs",
       "esModuleInterop": true,
@@ -20,6 +21,6 @@
         "src/**/*"
     ],
     "exclude": [
-        "src/client/**/*"
+        "src/web/**/*"
     ]
 }  

@@ -5,6 +5,11 @@ export async function createRecipe(name: string): Promise<RecipeInterface>{
   });
 }
 
+export async function getRecipes(): Promise<RecipeInterface[]> {
+  return await Recipe.find({});
+}
+
 export default {
-  createRecipe
+  createRecipe,
+  getRecipes
 };

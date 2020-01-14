@@ -4,7 +4,7 @@ import * as loggerLib from "./api/logger";
 import * as api from "./api";
 import * as db from "./db";
 
-const webappFolder = 'dist/client';
+const webappFolder = 'dist/web';
 
 const logger = loggerLib.createLogger('api.app');
 const app = express();
@@ -22,7 +22,7 @@ app.set("port", process.env.PORT);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.all('/api/*', api.a);
+api.routes(app);
 
 app.get('*.*', express.static(webappFolder));
 

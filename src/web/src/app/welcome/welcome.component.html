@@ -1,0 +1,39 @@
+<div fxLayout fxLayoutAlign="center center" class="center">
+  <mat-card>
+    <mat-card-title>Start typing your ingredients</mat-card-title>
+    <mat-card-subtitle>Most popular recipes will start appearing</mat-card-subtitle>
+    <mat-card-content>
+      <mat-chip-list #chipList>
+        <mat-chip>
+          Apple
+          <mat-icon matChipRemove>cancel</mat-icon>
+        </mat-chip>
+        <mat-chip>
+          Orange
+          <mat-icon matChipRemove>cancel</mat-icon>
+        </mat-chip>
+        <mat-chip>
+          Grapes
+          <mat-icon matChipRemove>cancel</mat-icon>
+        </mat-chip>
+        <input matInput placeholder="New ingredient...">
+      </mat-chip-list>
+      <mat-autocomplete>
+        <mat-option>
+          banana
+        </mat-option>
+        <mat-option>
+          pomegranite
+        </mat-option>
+        <mat-option>
+          pineapple
+        </mat-option>
+      </mat-autocomplete>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button>Go</button>
+    </mat-card-actions>
+    <mat-card-footer>
+    </mat-card-footer>
+  </mat-card>
+</div>
